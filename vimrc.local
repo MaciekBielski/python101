@@ -1,0 +1,2 @@
+nmap <F10> :! python3 %<CR>
+
