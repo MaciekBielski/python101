@@ -21,12 +21,13 @@ print('2.\t',a, '\t9 occurs',a.count(9), 'times')
 
 # filtering
 f13 = lambda x: x%13==3
-print('3.\t''filter:',filter(f13,range(0,100)))
+print('3.\t''filter:',[ x for x in filter(f13,range(0,100))] )
 
 # map
 flen = lambda x: len(x)
 in_tuple = ('a','bb','ccc','dddd','eeeee')
-print('4.\t''tuple:',in_tuple,'lengths by map:',map(flen,in_tuple))
+print('4.\t''tuple:',in_tuple,'lengths by map:',
+        [ x for x in map(flen,in_tuple)])
 
 # reduce - call a function on first two elements, then on result and third element and so on...
 # building alphabet by list comprehensions
@@ -37,6 +38,7 @@ print('5.\t''reduce: ',functools.reduce(fadd,in_str))
 
 # more fancy list comprehension
 # two fors make a carthesian multiplication
+# second for is nested within first
 lc=[ (a,b) for a in alph() for b in alph() if a==b]
 # generator comprehesion instead of list comprehension
 lc=( (chr(a[0]),chr(a[1])) for a in lc )
@@ -47,10 +49,12 @@ print('6.\t',list(map(tts,lc)))
 # [ [ [third] second] first ] etc...
 mat = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
 mat_transp=[ [ el[i] for el in mat ] for i in range(4) ]
-print('7.\t',mat_transp)
+print('7a.\t',mat_transp)
+mat_transp2=[ el[i] for i in range(4) for el in mat  ]
+print('7b.\t',mat_transp2)
 
 # convert a list tu a tuple
-print('8.\t',list(zip(*mat)))
+print('8.\t', list(zip(*mat)))
 
 # TUPLE - immutable
 et = ()         # empty tuple

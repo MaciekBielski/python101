@@ -60,13 +60,13 @@ print('\n','-'*40)
 def tuple_args(*args):
   ''' a function can be prepared to be called with a tuple '''
   for a in args:
-    print(a,end='')
+    print(a,end='-')
   else:
     print('\n','-'*40)
 tuple_args('nokia','samsung','htc')
 # definition of a tuple (), [] or {}
 tuple2=('audi','volvo','kia')
-tuple_args(tuple2)
+tuple_args(*tuple2)
 #difference between calling function for three arguments vs. for a tuple
 
 def dict_args(**kwargs):
