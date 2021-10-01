@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
-s ="Strings are immutable, len: " 
+if __name__ == '__main__':
+    print('Executed directly, not as a module\n\n')
+
+s ="Strings are immutable, len: "
 print(s,len(s))
 x = str(83)
 print('1.\t','int to string',x[0],x[1])
@@ -31,7 +34,7 @@ for i in range(1,6):
 
 print('13.\t')
 from math import pi
-print('{a:10}PI representation: {0:.4f}'.format(pi,a=''))
+print(f'{" ":10}f-string: PI = {pi:.4f}')
 
 print('14.\t')
 values_dict=dict(first='alpha', second='beta', third='gamma')

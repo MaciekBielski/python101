@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-s ='Lists are mutable\n' 
+s ='Lists are mutable\n'
 print(s)
 a = ['first','second',3]
 print( 'indexing returns an item, slicing returns a shallow copy')

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import sys
+
 print( '1.\t''for iterates over lists or strings')
 a='simple string'
 b=[11,22,33]
@@ -56,3 +58,13 @@ with open('file1.txt','r') as f:
     print(' ',l,end='')
   else:
     print('')
+
+# Exceptions
+print('6.')
+try:
+    x = 5/0
+except:
+    print(f'Exception:\n{sys.exc_info()}')
+else:
+    print('No exceptions raised')
+print('')
